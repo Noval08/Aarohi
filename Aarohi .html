@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aarohi ✨</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #ffe0f0, #fff5fb);
+      color: #444;
+      text-align: center;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    header {
+      padding: 60px 20px;
+      background-color: #fff0f6;
+      border-bottom: 2px dashed #f9c2dc;
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 60px;
+      color: #d63384;
+      margin-bottom: 10px;
+    }
+
+    .typewriter {
+      font-size: 18px;
+      color: #a84875;
+      font-style: italic;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid pink;
+      width: 0;
+      animation: typing 4s steps(40, end) forwards, blink .75s step-end infinite;
+      margin: auto;
+    }
+
+    @keyframes typing {
+      to { width: 100%; }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent }
+    }
+
+    section {
+      padding: 40px 20px;
+    }
+
+    .card {
+      max-width: 500px;
+      margin: 0 auto;
+      background: #ffffffd9;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 8px 20px rgba(255, 192, 203, 0.4);
+      border: 2px solid #ffc0cb;
+    }
+
+    h2 {
+      color: #e83e8c;
+      margin-bottom: 15px;
+    }
+
+    .flower {
+      font-size: 24px;
+      margin: 10px 0;
+    }
+
+    .continue-btn {
+      margin-top: 30px;
+      padding: 12px 24px;
+      font-size: 18px;
+      background: #ff69b4;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      animation: shake 2s infinite;
+      box-shadow: 0 0 15px #ffb6c1;
+      transition: 0.3s;
+    }
+
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-5px); }
+      50% { transform: translateX(5px); }
+      75% { transform: translateX(-5px); }
+    }
+
+    .continue-btn:hover {
+      background: #ff85c1;
+      box-shadow: 0 0 25px #ff69b4;
+    }
+
+    .hidden-box {
+      display: none;
+      margin-top: 20px;
+      padding: 20px;
+      background: #ffe4ec;
+      border-radius: 15px;
+      border: 1px dashed #ff99cc;
+      animation: fadeIn 1.5s ease-in-out forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .reveal-btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: transparent;
+      border: 2px dashed #e83e8c;
+      color: #e83e8c;
+      cursor: pointer;
+      border-radius: 15px;
+      font-weight: bold;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 20px;
+      background-color: #fff0f6;
+      font-size: 14px;
+      color: #aa5a80;
+    }
+
+    /* Floating hearts background */
+    .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: pink;
+      opacity: 0.6;
+      border-radius: 50%;
+      animation: float 10s infinite;
+    }
+
+    @keyframes float {
+      0% {
+        bottom: -10px;
+        left: calc(100% * var(--random-x));
+        opacity: 0.5;
+        transform: scale(0.5);
+      }
+      100% {
+        bottom: 100%;
+        left: calc(100% * var(--random-x));
+        opacity: 0;
+        transform: scale(1.2);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Aarohi</h1>
+    <p class="typewriter">Soft. Beautiful. One of a kind 🌸</p>
+  </header>
+
+  <section>
+    <div class="card">
+      <h2>About Her</h2>
+      <p>She is a soft soul with a beautiful heart. Her presence brings calm, and her smile brings sunshine.</p>
+
+      <div class="flower">🌷</div>
+
+      <h2>What She Loves</h2>
+      <p>Writing diaries, capturing little joys, and embracing every emotion like poetry.</p>
+
+      <div class="flower">📖 ✨</div>
+
+      <h2>Her Essence</h2>
+      <p>Graceful, kind, and deeply thoughtful — Aarohi turns ordinary days into quiet magic.</p>
+
+      <button class="reveal-btn" onclick="document.getElementById('hiddenBox').style.display='block'">Click to Reveal Surprise ✨</button>
+      <div id="hiddenBox" class="hidden-box">
+        <p>🌟 You are more special than you know. The world needs souls like yours. Keep shining, Aarohi 💖</p>
+      </div>
+
+      <button class="continue-btn" onclick="alert('More coming soon... 💫')">Continue ➤</button>
+    </div>
+  </section>
+
+  <footer>
+    Made with admiration, beauty & magic.
+  </footer>
+
+  <!-- Floating hearts -->
+  <script>
+    for (let i = 0; i < 30; i++) {
+      const heart = document.createElement('div');
+      heart.className = 'heart';
+      heart.style.setProperty('--random-x', Math.random());
+      heart.style.left = `${Math.random() * 100}%`;
+      heart.style.animationDuration = `${5 + Math.random() * 5}s`;
+      document.body.appendChild(heart);
+    }
+  </script>
+
+</body>
+</html>
